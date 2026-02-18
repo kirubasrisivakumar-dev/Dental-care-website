@@ -1,1 +1,1 @@
-# Dental-care-website
+A responsive frontend dental clinic website built using HTML, CSS, and JavaScript. It features smooth navigation, service details with pricing, an appointment booking form, patient reviews with star ratings, contact information, and a clean healthcare-themed UI.This project showcases responsive design, structured layouts, and basic JavaScript interactivity, and can be extended with backend and database integration for full functionality.
