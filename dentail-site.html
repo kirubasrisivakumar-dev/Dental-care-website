@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile with 32 - Dental Care</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; }
+
+    html{
+      scroll-behavior: smooth; }
+
+    body{
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f7ff;
+      color: #003b5c;
+      position: relative;}
+
+    header{
+      background: #99ddff;
+      color: #003b5c;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+    nav{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #b3e5ff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+
+    nav a{
+      color: #003b5c;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;}
+
+    nav a:hover{
+      background-color: #66ccff;
+      color: white;
+      border-radius: 5px;}
+
+    section{
+      padding: 50px 25px;
+      max-width: 1100px;
+      margin: auto;}
+
+    h2{
+      text-align: center;
+      margin-bottom: 25px;
+      color: #005b8c;}
+
+    .home-img{
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;}
+
+    .treatment{
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+
+    .treatment img{
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;}
+
+    .price{
+      font-weight: bold;
+      color: #0077b6;}
+
+    details summary{
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;}
+
+    footer{
+      background-color: #99ddff;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      color: #003b5c;}
+
+    .hidden{
+      display: none;}
+
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0077b6;
+    }
+
+    blockquote {
+      background: #ffffff;
+      padding: 15px 20px;
+      border-left: 5px solid #00aaff;
+      margin: 20px 0;
+      font-style: italic;
+      border-radius: 8px;
+    }
+
+    .call-icon {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: #00aaff;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 9999;
+      text-decoration: none;
+    }
+
+    .stars {
+      display: flex;
+      gap: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #ccc;
+    }
+
+    .stars input[type="radio"] {
+      display: none;
+    }
+
+    .stars label {
+      color: #ccc;
+    }
+
+    .stars input[type="radio"]:checked ~ label {
+      color: #ffca28;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+      footer {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    window.onload = () => showSection('home');
+  </script>
+</head>
+<body>
+  <style>
+    p {
+  text-indent: 50px;
+    }
+  </style>
+  <header>
+    <h1>Smile with 32 - Dental Care</h1>
+    <p>Where Healthy Smiles Begin! 🦷</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('services')">Services</a>
+    <a href="#" onclick="showSection('appointment')">Appointment</a>
+    <a href="#" onclick="showSection('reviews')">Reviews</a>
+    <a href="#" onclick="showSection('contacts')">Contact</a>
+  </nav>
+
+  <section id="home">
+    <img src="dental.jpeg" class="home-img" alt="Clinic Image">
+    <h2>Welcome to Smile with 32</h2>
+    <p>Smile with 32 Dental Care is more than just a clinic — it’s a place where science meets compassion. Our dedicated dental professionals bring years of experience, using the most advanced tools in modern dentistry. From pain-free treatments to personalized care, we ensure every visit leaves you with a smile. We believe in preventive care, education, and comfort, making us one of the most trusted names in dental wellness. Join us and experience a whole new way of caring for your smile.</p>
+  </section>
+
+  <section id="about" class="hidden">
+    <img src="dinest.jpg" class="about-img" alt="About Image">
+    <h2>About Our Clinic</h2>
+    <p>Smile with 32 Dental Care Dental Care, we have redefined dentistry with a commitment to innovation, integrity, and excellence. Located in the heart of Coimbatore, our clinic offers a welcoming atmosphere with state-of-the-art infrastructure. Our mission is to provide comprehensive and high-quality dental solutions tailored to individual needs. With an emphasis on hygiene and advanced techniques, we cover everything from regular check-ups to complex cosmetic procedures. Whether it’s your child’s first visit or a senior’s smile makeover, we deliver comfort and confidence in every treatment.</p>
+    <div>
+      <title>Opening Hours</title>
+  <style>
+    table {
+      color: rgb(98, 31, 207);
+      border-collapse: collapse;
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+    td, th {
+      border: 1px solid rgb(98, 31, 207);
+      padding: 10px 20px;
+      text-align: center
+    }
+     td{
+      text-align:center;
+    }4
+    th {
+      background-color: #f0e6ff;
+    }
+    
+tr:nth-child(even) {background-color: #f2f2f2;}
+    tr:hover {background-color: coral;}
+  </style>
+</head>
+<body>
+    <h2>Opening Hours</h2>
+  <table>
+    <tr><th>Day</th><th>Time</th></tr>
+    <tr><td>Monday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Tuesday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Wednesday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Thursday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Friday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Saturday</td><td>8 am - 10 pm</td></tr>
+    <tr><td>Sunday</td><td>Emergency cases only</td></tr>
+  </table>
+  </div>
+</section>
+    
+  <section id="services" class="hidden">
+    <h2>Our Dental Services</h2>
+     <div class="treatment">
+      <h3>😁 Teeth Whitening & Polishing</h3>
+      <img src="teeth whitening.jpeg" alt="Teeth Whitening">
+      <p class="price">Price: ₹2,000 - ₹4,000 per teeth</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Teeth whitening removes stains and discoloration for a radiant smile. Safe and effective, our polishing treatment adds shine and cleanliness.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Non-invasive, quick results, boosts confidence</li>
+          <li><strong>Disadvantages:</strong> Temporary sensitivity, not permanent</li>
+        </ul>
+      </details>
+    </div>
+1
+    <div class="treatment">
+      <h3>🪥 Braces, Invisalign & Orthodontics</h3>
+      <img src="braces.jpg" alt="Orthodontics">
+      <p class="price">Price: ₹45,000 - ₹1,25,000 overall cost</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Straighten misaligned teeth with traditional braces or invisible aligners. Personalized orthodontic plans for all age groups.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Long-term alignment, improved bite</li>
+          <li><strong>Disadvantages:</strong> Requires regular visits, initial discomfort</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>🛠️ Root Canal & Fillings</h3>
+      <img src="root canal.jpg" alt="Root Canal">
+      <p class="price">Price: ₹3,000 - ₹7,000 Per teeth</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Restore severely damaged teeth with advanced root canal therapy and tooth-colored fillings. Painless and precise treatment.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Saves tooth, relieves pain, natural look</li>
+          <li><strong>Disadvantages:</strong> Multiple sittings, post-treatment care</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>💎 Cosmetic Smile Makeovers</h3>
+      <img src="customer2.jpg" alt="Smile Makeover">
+      <p class="price">Price: ₹10,000 - ₹50,000 Charge based on need</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Enhance your smile using veneers, bonding, contouring, and teeth reshaping. Tailored to your personality and preferences.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Aesthetic improvement, personalized result</li>
+          <li><strong>Disadvantages:</strong> Higher cost, requires maintenance</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>🦷 Dental Implants</h3>
+      <img src="Dental Implants.jpg" alt="Dental Implants">
+      <p class="price">Price: ₹25,000 - ₹65,000 per implant</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Permanent solution for missing teeth using titanium-based roots and natural-looking crowns. Durable and effective restoration.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Long-lasting, stable, natural appearance</li>
+          <li><strong>Disadvantages:</strong> Surgical procedure, high cost</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>🧪 Full Mouth Rehabilitation</h3>
+      <img src="Full-mouth-rehabilitation-or-restoration.jpeg" alt="Full Mouth Rehabilitation">
+      <p class="price">Price: Starts form ₹50,000 - (Maximum price based on treatment plan)</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Comprehensive dental makeover to restore aesthetics and function including crowns, bridges, implants, and bite correction.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Total transformation, improved function</li>
+          <li><strong>Disadvantages:</strong> Time-consuming, expensive</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>🧒 Pediatric Dentistry</h3>
+      <img src="Pediatric Dentistry.jpeg" alt="Pediatric Dentistry">
+      <p class="price">Price: ₹500 - ₹3,000 per teeth</p>
+      <details>
+        <summary>More Information</summary>
+        <p>Gentle and caring dental treatments tailored for children, including cavity fillings, fluoride application, and oral hygiene education.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Builds good habits, early detection</li>
+          <li><strong>Disadvantages:</strong> Needs parental involvement</li>
+        </ul>
+      </details>
+    </div>
+
+    <div class="treatment">
+      <h3>👨‍⚕️ Emergency Dental Services</h3>
+      <img src="Emergency-Dentist.jpg" alt="Emergency Care">
+      <p class="price">Price: ₹1,000 - ₹5,000 (based on emergency)</p>
+      <details>
+        <summary>More Information</summary>
+        <p>24/7 assistance for dental injuries, infections, and urgent care. Immediate attention for swelling, severe pain, or broken teeth.</p>
+        <ul>
+          <li><strong>Advantages:</strong> Fast relief, expert care anytime</li>
+          <li><strong>Disadvantages:</strong> May involve emergency charges</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <section id="appointment" class="hidden">
+    <h2>Book Your Appointment</h2>
+    <form action="tq-dental1.html"></form>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <select>
+        <option>Choose Treatment</option>
+        <option>Teeth Whitening & Polishing</option>
+        <option>Braces, Invisalign & Orthodontics</option>
+        <option>Root Canal & Filling</option>
+        <option>Cosmetic Smile Makeover</option>
+        <option>Dental implant</option>
+        <option>Full Mouth Rehabilitation</option>
+        <option>Pediatric Dentistry</option>
+        <option>Emergency Dental Services</option>
+      </select>
+      <input type="date" required>
+      <textarea placeholder="Additional message"></textarea>
+      <button type="submit">Submit Appointment</button>
+    </form>
+  </section>
+
+  <section id="reviews" class="hidden">
+    <h2>Patient Reviews</h2>
+    <form>
+      <label for="rating">Rate Us:</label>
+      <div class="stars">
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+      </div>
+      <textarea placeholder="Write your review..." rows="4" required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+    <section id="reviews" style="background-color: #f0f8ff; padding: 40px; text-align: center;">
+  <h2 style="color: #00aaff;">Patient Reviews</h2>
+
+  <div style="max-width: 800px; margin: auto;">
+    
+    <blockquote style="background: #fff; padding: 20px; margin: 20px 0; border-left: 5px solid #00aaff; border-radius: 5px;">
+      <p style="font-size: 18px;">“Outstanding care! The smile makeover I received at BrightSmile changed my life!”</p>
+      <footer>– Angela</footer>
+      <div style="color: #FFD700; font-size: 20px;">★★★★★</div>
+    </blockquote>
+
+    <blockquote style="background: #fff; padding: 20px; margin: 20px 0; border-left: 5px solid #00aaff; border-radius: 5px;">
+      <p style="font-size: 18px;">“Great hospitality and painless treatment. Thank you so much!”</p>
+      <footer>– Kiruba Sri</footer>
+      <div style="color: #FFD700; font-size: 20px;">☆★★★★</div>
+    </blockquote>
+    </div>
+    </section>
+
+
+   <section id="contacts" class="hidden">
+    <h2>Contact Information</h2>
+    <div class="contact-info" style="background:#ffffff; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); max-width: 600px; margin:auto;">
+      <p>📞 <strong>Phone:</strong> <a href="tel:+919809778654">+91 98097 78654</a></p>
+      <p>📧 <strong>Email:</strong> <a href="mailto:newclinic@example.com">newclinic@example.com</a></p>
+      <p>📍 <strong>Address:</strong> 3/53, Thottipalayam, Madhapur (Po), Somanur-CBE, Tamil Nadu</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Smile with 32 - Dental Care. Designed with 💙 in India.
+  </footer>
+
+  <!-- Always-visible Call & Email icons -->
+  <a href="tel:+919809778654" class="call-icon">📞</a>
+  <a href="mailto:newclinic@example.com" class="mail-icon">📧</a>
+
+</body>
+</html>
